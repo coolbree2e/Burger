@@ -11,6 +11,10 @@ button{
   display:block;
   height:25px;
 }
+input{
+  height: 25px;
+}
+
 
 li {
     padding: 5px;
