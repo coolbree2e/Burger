@@ -2,30 +2,19 @@
 
 <h2 class="head">BurgerTime!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{!-- {{#unless devoured}} --}}
-      {{!-- {{> burgers/burger-block devoured=true}} --}}
-    {{!-- {{/unless}} --}}
-  {{/each}}
-</ul>
+<img id="pic" src="assets/img/burgerpic.png">
 
 
 
-{{!-- <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul> --}}
 
-<h2 class="form-group">Add any burger you want</h2>
-<form class="create-form">
+
+<h2 class="head"> Add any burger you want</h2>
+
+<form class="create-form"  method="POST">
 
   <div class="form-group">
     <label for="ca">Burger: </label>
-    <input type="text"  id="box" name="name">
+    <input type="text"  id="box" name="burger_name">
   </div>
 
   
