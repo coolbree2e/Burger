@@ -16,10 +16,15 @@ input{
 }
 
 
-li {
+li,ul {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: #baff00;
+    width: 69%;
+  }
+  .colum{
+
+    overflow: auto;
   }
   
   .label {
