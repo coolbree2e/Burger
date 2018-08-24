@@ -7,7 +7,7 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#ca").val().trim(),
+        burger_name: $("#box").val().trim(),
       };
   
       // Send the POST request.
