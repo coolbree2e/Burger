@@ -3,15 +3,15 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
-var burger = require("../models/burger.js");
-
+// var burger = require("../models/burger.js");
+var burger = require("../public/js/feburger");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burger.all(function(data) {
     var hbsObject = {
       burgers: data
     };
-    console.log("WTF",hbsObject);
+    console.log("get the stuff from the api",hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -32,7 +32,7 @@ router.post("/api/burgers", function(req, res) {
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  console.log("condition", condition);
+  console.log("WTF", condition);
 
   burger.update({
     devoured: req.body.devoured
@@ -42,6 +42,8 @@ router.put("/api/burgers/:id", function(req, res) {
       return res.status(404).end();
     } else {
       res.status(200).end();
+      console.log(res);
+
     }
   });
 });
