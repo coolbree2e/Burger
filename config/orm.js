@@ -61,7 +61,7 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log(queryString);
+    console.log(queryString,"--------");
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
@@ -79,7 +79,7 @@ var orm = {
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
-    console.log(queryString);
+    console.log(queryString,"changes the boolean");
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

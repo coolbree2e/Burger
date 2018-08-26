@@ -14,7 +14,9 @@ button{
 input{
   height: 25px;
 }
-
+#del{
+  float: right;
+}
 
 li,ul {
     padding: 5px;

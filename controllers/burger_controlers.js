@@ -61,5 +61,16 @@ router.delete("/api/burgers/:id", function(req, res) {
   });
 });
 
+router.delete("/api/burgers/all", function(req,res){
+  var condition = "burgers = " + req.params.all;
+  burger.delete(condition, function(result){
+    if(result.affectedRows == 0 ) {
+      return res.status(404).end();
+    }else {
+      res.status(200).end();
+    }
+  });
+});
+
 // Export routes for server.js to use.
 module.exports = router;

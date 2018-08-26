@@ -1,6 +1,6 @@
-<h1 class="head">Burgers!</h1>
+<h1 class="head">Burgers! Burgers! Burgers! Burgers!</h1>
 
-<h2 class="head">BurgerTime!</h2>
+<h2 class="head">Build a Burger!</h2>
 
 <img id="pic" src="assets/img/burgerpic.png">
 
@@ -13,14 +13,19 @@
 {{this.id}}
 {{this.burger_name}}
  </li>
+   <button id="devour" type="button" data-id="{{this.id}}" data-devoured="{{this.devoured}}" data-burge_name="{{this.burger_name}}">Eat It!</button>
  {{/unless}}
  {{/each}}
     </div>
+    
     <div class="col-2">
       {{!-- 2 of 3 (wider) --}}
     </div>
-    <div class="col">
+
+
+
     
+    <div class="col"> 
   {{#each burgers}}
     {{#if devoured}}
     <ul >
@@ -50,7 +55,4 @@
   
 
   <button type="submit">Place the order</button>
-
-
-  
 </form>
